@@ -60,26 +60,26 @@ def sub_one_map(BT: BinaryTree):
 
 
 class Tests(unittest.TestCase):
-    def test_size(self):
+    def test_sum(self):
         self.assertEqual(sum(BTNode(5)), 5)
         self.assertEqual(sum(BTNode(5), BTNode(2)), 7)
-
+    def test_size(self):
         self.assertEqual(size(BTNode(0)), 0)
         self.assertEqual(size(BTNode(5), BTNode(2), BTNode(4) ), 12)
-
+    def test_num_leaf_nodes(self):
         self.assertEqual(num_leaf_nodes(BTNode(10), 1))
         self.assertEqual(num_leaf_nodes(BTNode(10), BTNode(5), BTNode(7)), 12)
-
+    def test_height(self):
         self.assertEqual(height(BTNode(5), BTNode(1)), 1)
         self.assertEqual(height(BTNode(5), BTNode(3), BTNode(4), BTNode(2), BTNode(3)))
-
+    def test_has_triple(self):
         self.assertEqual(has_triple(BTNode(2), BTNode(0), BTNode(3)), 6)
         self.assertEqual(has_triple(BTNode(0), BTNode(0), BTNode(3)), 0)
-
+    def test_sub_one_map(self):
         self.assertEqual(sub_one_map((BTNode(5), BTNode(1))), BTNode(4), BTNode(0))
         self.assertEqual(sub_one_map(BTNode(0)), 0)
 
-        
+
     
 
 
